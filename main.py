@@ -54,3 +54,7 @@ if __name__ == "__main__":
     for r in results:
         for name,C in r.items():
             print(f"{name}: {C[0]} || donation: {C[1]} fame: {C[2]}")
+    with open("contribution.txt", "w", encoding="utf-8") as file:
+        for r in results:
+            for name, C in r.items():
+                file.write(f"{name}: {C[0]} || donation: {C[1]} fame: {C[2]}\n")
