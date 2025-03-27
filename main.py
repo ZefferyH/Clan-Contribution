@@ -23,7 +23,6 @@ def get_contributions(clan_tag="#QUR0LJVY", donation_ratio=0.3, fame_ratio=0.7):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching donations: {e}")
 
-    # Fetch fame info from the current clan war (river race) endpoint
     war_url = f"https://api.clashroyale.com/v1/clans/{encoded_tag}/currentriverrace"
     try:
         response = requests.get(war_url, headers=headers)
